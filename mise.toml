@@ -1,4 +1,5 @@
 [tasks.pre-commit]
+depends = ["no-n-a-r-f"]
 run = "hk run pre-commit"
 
 [tasks.prelint]
