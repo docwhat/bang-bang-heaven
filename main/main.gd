@@ -2,8 +2,8 @@ extends Node2D
 
 ## Setup our game.
 func _ready() -> void:
-	print("NARF main")
 	set_window_min_size()
+
 
 ## Grab the initial size and set the minimum to match it.
 func set_window_min_size() -> void:

@@ -15,6 +15,10 @@ run/main_scene="uid://cfmo7qhyb87cs"
 config/features=PackedStringArray("4.5", "Forward Plus")
 config/icon="res://icon.svg"
 
+[autoload]
+
+GUIDE="*res://addons/guide/guide.gd"
+
 [display]
 
 window/size/viewport_width=320
@@ -23,6 +27,10 @@ window/stretch/mode="viewport"
 window/stretch/aspect="keep_width"
 window/stretch/scale=2.0
 window/stretch/scale_mode="integer"
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/guide/plugin.cfg")
 
 [rendering]
 

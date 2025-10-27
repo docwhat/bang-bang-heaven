@@ -12,10 +12,16 @@ exclude = List(
 local linters = new Mapping<String, Step> {
     ["markdown"] = Builtins.markdown_lint
     ["pkl"]  = Builtins.pkl
+
     ["mise"] {
         glob = "mise.toml"
         check = "mise fmt --check"
         fix = "mise fmt"
+    }
+
+    ["no-n-a-r-f"] {
+        glob = "*"
+        check = "script/no-n-a-r-f -- {{files}}"
     }
 
     ["gdscript"] {
