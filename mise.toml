@@ -15,6 +15,7 @@ run = "(godot --path . --editor >& /dev/null &)"
 
 [tools]
 hk = "1.19.0"
+oxipng = "9.1.5"
 pkl = "0.29.1"
 
 [tools."ubi:gdquest/gdscript-formatter"]

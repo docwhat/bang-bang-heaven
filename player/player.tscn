@@ -1,7 +1,8 @@
-[gd_scene load_steps=23 format=3 uid="uid://cfmo7qhyb87cs"]
+[gd_scene load_steps=24 format=3 uid="uid://cfmo7qhyb87cs"]
 
 [ext_resource type="Texture2D" uid="uid://dwynqs1rtcq3p" path="res://player/Angel_2.png" id="1_oul6g"]
 [ext_resource type="Script" uid="uid://02muf7y37e1n" path="res://player/player.gd" id="1_rkbax"]
+[ext_resource type="Resource" uid="uid://dp3p5llwdosvs" path="res://mapping_context/actions/move.tres" id="2_g1dw6"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_rkbax"]
 radius = 2.0
@@ -153,6 +154,7 @@ animations = [{
 
 [node name="Carl" type="Area2D"]
 script = ExtResource("1_rkbax")
+move_action = ExtResource("2_g1dw6")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 7)
