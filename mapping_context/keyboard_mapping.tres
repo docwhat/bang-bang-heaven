@@ -1,53 +1,57 @@
-[gd_resource type="Resource" script_class="GUIDEMappingContext" load_steps=23 format=3 uid="uid://br31eyoiiooml"]
+[gd_resource type="Resource" script_class="GUIDEMappingContext" load_steps=27 format=3 uid="uid://br31eyoiiooml"]
 
 [ext_resource type="Script" uid="uid://cpplm41b5bt6m" path="res://addons/guide/guide_action_mapping.gd" id="1_24i3v"]
 [ext_resource type="Script" uid="uid://dsa1dnifd6w32" path="res://addons/guide/guide_mapping_context.gd" id="2_kj0j1"]
-[ext_resource type="Resource" uid="uid://dp3p5llwdosvs" path="res://mapping_context/actions/move_keyboard.tres" id="2_y22xp"]
+[ext_resource type="Resource" uid="uid://dp3p5llwdosvs" path="res://mapping_context/actions/move.tres" id="2_y22xp"]
 [ext_resource type="Script" uid="uid://mtx1unc2aqn7" path="res://addons/guide/guide_input_mapping.gd" id="3_k775a"]
 [ext_resource type="Script" uid="uid://cw71o87tvdx3q" path="res://addons/guide/inputs/guide_input_key.gd" id="4_gsjl0"]
 [ext_resource type="Script" uid="uid://bl8rjl4oaldje" path="res://addons/guide/modifiers/guide_modifier.gd" id="5_dgjd0"]
 [ext_resource type="Script" uid="uid://ckggy40lm0vjc" path="res://addons/guide/modifiers/guide_modifier_negate.gd" id="6_1inc4"]
 [ext_resource type="Script" uid="uid://bm5gjgadon6hb" path="res://addons/guide/modifiers/guide_modifier_input_swizzle.gd" id="7_oa3la"]
 [ext_resource type="Script" uid="uid://x74mnwgr08a7" path="res://addons/guide/triggers/guide_trigger.gd" id="8_t8wre"]
+[ext_resource type="Resource" uid="uid://cion3v02h0514" path="res://mapping_context/actions/attack.tres" id="9_lkttf"]
 
 [sub_resource type="Resource" id="Resource_ecmlc"]
 script = ExtResource("4_gsjl0")
 key = 87
 
-[sub_resource type="Resource" id="Resource_cktw5"]
+[sub_resource type="Resource" id="Resource_6t14u"]
 script = ExtResource("6_1inc4")
 
-[sub_resource type="Resource" id="Resource_h1m3a"]
+[sub_resource type="Resource" id="Resource_lkttf"]
 script = ExtResource("7_oa3la")
 
 [sub_resource type="Resource" id="Resource_eqoyf"]
 script = ExtResource("3_k775a")
 input = SubResource("Resource_ecmlc")
-modifiers = Array[ExtResource("5_dgjd0")]([SubResource("Resource_cktw5"), SubResource("Resource_h1m3a")])
+modifiers = Array[ExtResource("5_dgjd0")]([SubResource("Resource_6t14u"), SubResource("Resource_lkttf")])
+metadata/_guide_modifiers_collapsed = true
 
 [sub_resource type="Resource" id="Resource_0iv7a"]
 script = ExtResource("4_gsjl0")
 key = 83
 
-[sub_resource type="Resource" id="Resource_drah2"]
+[sub_resource type="Resource" id="Resource_ymeq5"]
 script = ExtResource("7_oa3la")
 
 [sub_resource type="Resource" id="Resource_7las1"]
 script = ExtResource("3_k775a")
 input = SubResource("Resource_0iv7a")
-modifiers = Array[ExtResource("5_dgjd0")]([SubResource("Resource_drah2")])
+modifiers = Array[ExtResource("5_dgjd0")]([SubResource("Resource_ymeq5")])
+metadata/_guide_modifiers_collapsed = true
 
 [sub_resource type="Resource" id="Resource_fraiw"]
 script = ExtResource("4_gsjl0")
 key = 65
 
-[sub_resource type="Resource" id="Resource_qwfxx"]
+[sub_resource type="Resource" id="Resource_hms8k"]
 script = ExtResource("6_1inc4")
 
 [sub_resource type="Resource" id="Resource_r5jw5"]
 script = ExtResource("3_k775a")
 input = SubResource("Resource_fraiw")
-modifiers = Array[ExtResource("5_dgjd0")]([SubResource("Resource_qwfxx")])
+modifiers = Array[ExtResource("5_dgjd0")]([SubResource("Resource_hms8k")])
+metadata/_guide_modifiers_collapsed = true
 
 [sub_resource type="Resource" id="Resource_ytrn5"]
 script = ExtResource("4_gsjl0")
@@ -56,13 +60,28 @@ key = 68
 [sub_resource type="Resource" id="Resource_0fffx"]
 script = ExtResource("3_k775a")
 input = SubResource("Resource_ytrn5")
+metadata/_guide_triggers_collapsed = false
+metadata/_guide_modifiers_collapsed = true
 
 [sub_resource type="Resource" id="Resource_26s2d"]
 script = ExtResource("1_24i3v")
 action = ExtResource("2_y22xp")
 input_mappings = Array[ExtResource("3_k775a")]([SubResource("Resource_eqoyf"), SubResource("Resource_7las1"), SubResource("Resource_r5jw5"), SubResource("Resource_0fffx")])
 
+[sub_resource type="Resource" id="Resource_vm8sd"]
+script = ExtResource("4_gsjl0")
+key = 32
+
+[sub_resource type="Resource" id="Resource_ai6mx"]
+script = ExtResource("3_k775a")
+input = SubResource("Resource_vm8sd")
+
+[sub_resource type="Resource" id="Resource_djx0o"]
+script = ExtResource("1_24i3v")
+action = ExtResource("9_lkttf")
+input_mappings = Array[ExtResource("3_k775a")]([SubResource("Resource_ai6mx")])
+
 [resource]
 script = ExtResource("2_kj0j1")
-mappings = Array[ExtResource("1_24i3v")]([SubResource("Resource_26s2d")])
+mappings = Array[ExtResource("1_24i3v")]([SubResource("Resource_26s2d"), SubResource("Resource_djx0o")])
 metadata/_custom_type_script = "uid://dsa1dnifd6w32"

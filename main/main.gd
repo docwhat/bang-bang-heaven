@@ -1,12 +1,13 @@
 extends Node2D
 
 ## The mapping context that we use (GUIDE).
-@export var mapping_context:GUIDEMappingContext
+@export var mapping_context: GUIDEMappingContext
+
 
 ## Setup our game.
 func _ready() -> void:
 	set_window_min_size()
-	GUIDE.enable_mapping_context(mapping_context)	
+	GUIDE.enable_mapping_context(mapping_context)
 
 
 ## Grab the initial size and set the minimum to match it.

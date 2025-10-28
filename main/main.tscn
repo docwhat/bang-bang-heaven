@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://cfmo7qhyb87cs" path="res://player/player.tscn" id="1_53q0u"]
 [ext_resource type="Script" uid="uid://baux1fjssvrnm" path="res://main/main.gd" id="1_pjrb6"]
-[ext_resource type="Resource" uid="uid://br31eyoiiooml" path="res://mapping_context/game_mapping_context.tres" id="2_c651c"]
+[ext_resource type="Resource" uid="uid://br31eyoiiooml" path="res://mapping_context/keyboard_mapping.tres" id="2_c651c"]
 [ext_resource type="Texture2D" uid="uid://b2dm4nvbjh2oe" path="res://ui/UI_Frames.png" id="3_xwkvk"]
 [ext_resource type="PackedScene" uid="uid://dkr80d2pi0d41" path="res://addons/guide/debugger/guide_debugger.tscn" id="5_3wy1v"]
 
