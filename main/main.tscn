@@ -1,28 +1,29 @@
-[gd_scene load_steps=5 format=3 uid="uid://vfx1384vj264"]
+[gd_scene load_steps=6 format=3 uid="uid://vfx1384vj264"]
 
 [ext_resource type="PackedScene" uid="uid://cfmo7qhyb87cs" path="res://player/player.tscn" id="1_53q0u"]
 [ext_resource type="Script" uid="uid://baux1fjssvrnm" path="res://main/main.gd" id="1_pjrb6"]
 [ext_resource type="Resource" uid="uid://br31eyoiiooml" path="res://mapping_context/game_mapping_context.tres" id="2_c651c"]
 [ext_resource type="Texture2D" uid="uid://b2dm4nvbjh2oe" path="res://ui/UI_Frames.png" id="3_xwkvk"]
+[ext_resource type="PackedScene" uid="uid://dkr80d2pi0d41" path="res://addons/guide/debugger/guide_debugger.tscn" id="5_3wy1v"]
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_pjrb6")
 mapping_context = ExtResource("2_c651c")
 
-[node name="Playfield" type="CanvasLayer" parent="."]
+[node name="Play Layer" type="CanvasLayer" parent="."]
 
-[node name="Carl" parent="Playfield" instance=ExtResource("1_53q0u")]
+[node name="Carl" parent="Play Layer" instance=ExtResource("1_53q0u")]
 position = Vector2(145, 82)
 
-[node name="UI" type="CanvasLayer" parent="."]
+[node name="UI Layer" type="CanvasLayer" parent="."]
 
-[node name="PanelContainer" type="PanelContainer" parent="UI"]
+[node name="PanelContainer" type="PanelContainer" parent="UI Layer"]
 offset_left = 8.0
 offset_top = 8.0
 offset_right = 58.0
 offset_bottom = 48.0
 
-[node name="NinePatchRect" type="NinePatchRect" parent="UI/PanelContainer"]
+[node name="NinePatchRect" type="NinePatchRect" parent="UI Layer/PanelContainer"]
 layout_mode = 2
 texture = ExtResource("3_xwkvk")
 region_rect = Rect2(294.83173, 7.4252434, 34.42639, 33.318844)
@@ -31,16 +32,20 @@ patch_margin_top = 7
 patch_margin_right = 7
 patch_margin_bottom = 7
 
-[node name="MarginContainer" type="MarginContainer" parent="UI/PanelContainer"]
+[node name="MarginContainer" type="MarginContainer" parent="UI Layer/PanelContainer"]
 layout_mode = 2
 theme_override_constants/margin_left = 8
 theme_override_constants/margin_top = 8
 theme_override_constants/margin_right = 8
 theme_override_constants/margin_bottom = 8
 
-[node name="GridContainer" type="GridContainer" parent="UI/PanelContainer/MarginContainer"]
+[node name="GridContainer" type="GridContainer" parent="UI Layer/PanelContainer/MarginContainer"]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="UI/PanelContainer/MarginContainer/GridContainer"]
+[node name="Label" type="Label" parent="UI Layer/PanelContainer/MarginContainer/GridContainer"]
 layout_mode = 2
 text = "EXP:"
+
+[node name="Debug Layer" type="CanvasLayer" parent="."]
+
+[node name="GuideDebugger" parent="Debug Layer" instance=ExtResource("5_3wy1v")]

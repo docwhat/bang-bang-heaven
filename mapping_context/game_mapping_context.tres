@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://cpplm41b5bt6m" path="res://addons/guide/guide_action_mapping.gd" id="1_24i3v"]
 [ext_resource type="Script" uid="uid://dsa1dnifd6w32" path="res://addons/guide/guide_mapping_context.gd" id="2_kj0j1"]
-[ext_resource type="Resource" uid="uid://dp3p5llwdosvs" path="res://mapping_context/actions/move.tres" id="2_y22xp"]
+[ext_resource type="Resource" uid="uid://dp3p5llwdosvs" path="res://mapping_context/actions/move_keyboard.tres" id="2_y22xp"]
 [ext_resource type="Script" uid="uid://mtx1unc2aqn7" path="res://addons/guide/guide_input_mapping.gd" id="3_k775a"]
 [ext_resource type="Script" uid="uid://cw71o87tvdx3q" path="res://addons/guide/inputs/guide_input_key.gd" id="4_gsjl0"]
 [ext_resource type="Script" uid="uid://bl8rjl4oaldje" path="res://addons/guide/modifiers/guide_modifier.gd" id="5_dgjd0"]
